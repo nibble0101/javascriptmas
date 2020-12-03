@@ -6,11 +6,12 @@ This is a set of programming challenges from [scrimba.com]() which is running fr
 
 ### Chunkey monkey
 
-![chunkey monkey challenge](03-chunky-mokey.png)
+![chunkey monkey challenge](./03-chunky-mokey.png)
 
 <details>
   <summary>Solution</summary>
   <p>
+
   ```js
   function chunkyMonkey(values, size) {
     const chunkedArray = [];
@@ -21,6 +22,7 @@ This is a set of programming challenges from [scrimba.com]() which is running fr
     return chunkedArray;
   }
   ```
+
   </p>
 
 </details>
