@@ -6,3 +6,5 @@ function chunkyMonkey(values, size) {
     }
     return chunkedArray;
 }
+
+module.export = { chunkyMonkey };
