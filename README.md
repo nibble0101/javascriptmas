@@ -6,7 +6,7 @@ This is a set of programming challenges from [scrimba.com]() which is running fr
 
 ### Chunkey monkey
 
-![chunkey monkey challenge](./03-chunky-mokey.png)
+![chunkey monkey challenge](03-chunky-mokey.png?raw=true "Title")
 
 <details>
   <summary>Solution</summary>
