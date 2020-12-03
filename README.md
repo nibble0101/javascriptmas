@@ -4,6 +4,40 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
 ## Challenges
 
+### Candies
+
+![candies challenge](questions/01-candies.png?raw=true "Title")
+
+<details>
+   <summary>Solution</summary>
+   <p>
+
+    ```js
+    function candies(children, candy) {
+      return Math.floor(candy / children) * children;
+    }
+    ```
+   </p>
+</details>
+
+### Deposit profit
+
+![deposit profit challenge](questions/02-deposit-profit.png)
+
+<details>
+   <summary>Solution</summary>
+   <p>
+
+   ```js
+   function depositProfit(deposit, rate, threshold) {
+    const years = Math.log(threshold / deposit) / Math.log(1 + rate / 100);
+    return Number.isInteger(years) ? years + 1 : Math.ceil(years);
+  }
+  ```
+
+   </p>
+</details>
+
 ### Chunkey monkey
 
 ![chunkey monkey challenge](questions/03-chunky-monkey.png?raw=true "Title")
