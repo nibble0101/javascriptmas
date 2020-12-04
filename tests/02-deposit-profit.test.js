@@ -2,6 +2,9 @@ const { depositProfit } = require('../solutions/02-deposit-profit');
 
 describe('tests/02-deposit-profit.test.js', () => {
     test('depositProfit should be a function', () => {
+        expect(typeof depositProfit === 'function').toBe(true);
+    })
+    test('depositProfit should not throw an error', () => {
         expect(() => depositProfit(100, 20, 1700)).not.toThrow();
     })
     test('depositProfit should return a number', () => {
