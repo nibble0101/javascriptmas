@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "message": "echo \"Finished running tests \" && exit 0"
+    "pre-test-message": "echo \"First running tests before committing \" && exit 0",
+    "post-test-message": "echo \"Finished running tests \" && exit 0"
   },
-  "pre-commit": ["test", "message"],
+  "pre-commit": ["pre-test-message","test", "post-test-message"],
+  "pre-commit.silent": true,
   "author": "Joseph Mawa",
   "license": "ISC",
   "devDependencies": {
