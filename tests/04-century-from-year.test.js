@@ -2,6 +2,9 @@ const { centuryFromYear } = require('../solutions/04-century-from-year');
 
 describe('tests/04-century-from-year.test.js', () => {
     test('centuryFromYear should be a function', () => {
+        expect(typeof centuryFromYear === 'function').toBe(true);
+    })
+    test('centuryFromYear should not throw an error', () => {
         expect(() => centuryFromYear(2000)).not.toThrow();
     })
     test('centuryFromYear should return a number', () => {
