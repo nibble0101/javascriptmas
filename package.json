@@ -8,11 +8,18 @@
     "pre-test-message": "echo \"First running tests before committing \" && exit 0",
     "post-test-message": "echo \"Finished running tests \" && exit 0"
   },
-  "pre-commit": ["pre-test-message","test", "post-test-message"],
+  "pre-commit": [
+    "pre-test-message",
+    "test",
+    "post-test-message"
+  ],
   "pre-commit.silent": true,
   "author": "Joseph Mawa",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^7.14.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
     "jest": "^26.6.3",
     "pre-commit": "^1.2.2"
   }
