@@ -2,6 +2,9 @@ const { candies } = require('../solutions/01-candies');
 
 describe('tests/01-candies.test.js', () => {
     test('candies should be a function', () => {
+        expect(typeof candies === 'function').toBe(true);
+    })
+    test('candies should not throw an error', () => {
         expect(() => candies(3, 9)).not.toThrow();
     })
     test('candies should return a number', () => {
