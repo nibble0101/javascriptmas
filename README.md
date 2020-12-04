@@ -61,3 +61,24 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
   </p>
 
 </details>
+
+### Century from year
+
+![century from year challenge](questions/04-century-from-year.png?raw=true "Title")
+
+<details>
+   <summary>Solution</summary>
+
+   <p>
+
+   ```js
+
+   function centuryFromYear(num) {
+    return num % 100 ? Math.ceil(num/100): num/100;
+   }
+   
+   ```
+
+   </p>
+
+</details>
