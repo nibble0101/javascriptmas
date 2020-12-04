@@ -10,6 +10,9 @@ describe('tests/03-chunky-monkey.test.js', () => {
     test('chunkyMonkey should return an array of arrays', () => {
         expect(Array.isArray(chunkyMonkey([23, 12, 34], 2)[0])).toBe(true);
     })
+    test('chunkyMonkey([23, 12, 34], 2) should return [[ 23, 12 ], [ 34 ]]', () => {
+        expect(chunkyMonkey([23, 12, 34], 2)).toEqual(expect.arrayContaining([[23, 12], [ 34 ]]));
+    })
     test('chunkyMonkey([23, 12, 34], 2)[1][0] should be 34', () => {
         expect(chunkyMonkey([23, 12, 34], 2)[1][0]).toBe(34);
     })
