@@ -4,11 +4,14 @@
   "description": "This is a set of challenges and solutions in JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "message": "echo \"Finished running tests \" && exit 0"
   },
+  "pre-commit": ["test", "message"],
   "author": "Joseph Mawa",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^26.6.3"
+    "jest": "^26.6.3",
+    "pre-commit": "^1.2.2"
   }
 }
