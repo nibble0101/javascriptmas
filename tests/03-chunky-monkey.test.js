@@ -2,13 +2,24 @@ const { chunkyMonkey } = require('../solutions/03-chunky-monkey');
 
 describe('tests/03-chunky-monkey.test.js', () => {
     test('chunkyMonkey should be a function', () => {
+        expect(typeof chunkyMonkey === 'function').toBe(true);
+    })
+    test('chunkyMonkey should not throw an error', () => {
         expect(() => chunkyMonkey([23, 12, 50], 1)).not.toThrow();
     })
     test('chunkyMonkey should return an array', () => {
-        expect(Array.isArray(chunkyMonkey([23, 12, 50], 1))).toBe(true);
+        expect(Array.isArray(chunkyMonkey([23, 12, 34], 2))).toBe(true);
     })
     test('chunkyMonkey should return an array of arrays', () => {
-        expect(Array.isArray(chunkyMonkey([23, 12, 34], 2)[0])).toBe(true);
+        let allArrays = true;
+        const arr = chunkyMonkey([23, 12, 34], 2), len = arr.length;
+        for(let i = 0; i < len; i++){
+            if(Array.isArray(arr[i]) === false){
+                allArrays = false;
+                break;
+            }
+        }
+        expect(allArrays).toBe(true);
     })
     test('chunkyMonkey([23, 12, 34], 2) should return [[ 23, 12 ], [ 34 ]]', () => {
         expect(chunkyMonkey([23, 12, 34], 2)).toEqual(expect.arrayContaining([[23, 12], [ 34 ]]));
