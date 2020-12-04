@@ -3,4 +3,4 @@ function depositProfit(deposit, rate, threshold) {
     return Number.isInteger(years) ? years + 1 : Math.ceil(years);
   }
 
-  module.export = { depositProfit };
+  module.exports = { depositProfit };
