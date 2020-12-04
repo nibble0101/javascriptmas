@@ -11,12 +11,13 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 <details>
    <summary>Solution</summary>
    <p>
-
-    ```js
-    function candies(children, candy) {
+     
+  ```js
+     function candies(children, candy) {
       return Math.floor(candy / children) * children;
     }
-    ```
+  ```
+    
    </p>
 </details>
 
