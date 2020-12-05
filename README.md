@@ -80,7 +80,7 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
    ```js
 
    function centuryFromYear(num) {
-    return num % 100 ? Math.ceil(num/100): num/100;
+      return num % 100 ? Math.ceil(num/100): num/100;
    }
 
    ```
@@ -90,3 +90,23 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 </details>
 
 ***********
+
+### Reverse a string
+
+![reverse a string challenge](questions/05-reverse-string.png?raw=true "Title")
+
+<details>
+   <summary>Reverse a string</summary>
+
+   <p>
+
+   ```js
+   function reverseAString(str) {
+      return str.split('').reverse().join('');
+   }
+   ```
+
+   </p>
+</details>
+
+**********
