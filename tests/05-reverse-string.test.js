@@ -13,4 +13,7 @@ describe('tests/05-reverse-string.test.js', () => {
   test('expect reverseAString(hello) to return \'olleh\'', () => {
     expect(reverseAString('hello')).toBe('olleh');
   });
+  test('expect reverseAString(hello world) to return \'dlrow olleh\'', () => {
+    expect(reverseAString('hello world')).toBe('dlrow olleh');
+  });
 });
