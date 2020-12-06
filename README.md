@@ -110,3 +110,20 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 </details>
 
 **********
+
+## Sort by length
+
+![sort by length challenge](questions/06-sort-by-length.png?raw=true "Sort by length challenge")
+
+<details>
+
+   <summary>Solution</summary>
+   <p>
+
+   ```js
+     function sortByLength(strs) {
+       return strs.sort((a, b) => a.length - b.length);
+     }
+   ```
+   </p>
+</details>
