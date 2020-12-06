@@ -6,7 +6,7 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
 ### Candies
 
-![candies challenge](questions/01-candies.png?raw=true "Title")
+![candies challenge](questions/01-candies.png?raw=true "Candies challenge")
 
 <details>
    <summary>Solution</summary>
@@ -25,7 +25,7 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
 ### Deposit profit
 
-![deposit profit challenge](questions/02-deposit-profit.png)
+![deposit profit challenge](questions/02-deposit-profit.png?raw=true "Deposit profit challenge")
 
 <details>
    <summary>Solution</summary>
@@ -45,7 +45,7 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
 ### Chunkey monkey
 
-![chunkey monkey challenge](questions/03-chunky-monkey.png?raw=true "Title")
+![chunkey monkey challenge](questions/03-chunky-monkey.png?raw=true "Chunky monkey challenge")
 
 <details>
   <summary>Solution</summary>
@@ -70,7 +70,7 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
 ### Century from year
 
-![century from year challenge](questions/04-century-from-year.png?raw=true "Title")
+![century from year challenge](questions/04-century-from-year.png?raw=true "Century from year challenge")
 
 <details>
    <summary>Solution</summary>
@@ -93,7 +93,7 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
 ### Reverse a string
 
-![reverse a string challenge](questions/05-reverse-string.png?raw=true "Title")
+![reverse a string challenge](questions/05-reverse-string.png?raw=true "Reverse a string challenge")
 
 <details>
    <summary>Reverse a string</summary>
