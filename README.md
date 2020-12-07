@@ -129,3 +129,25 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 </details>
 
 **********
+
+## Count Vowel Consonant
+
+![count vowel consonant challenge](questions/07-count-vowel-consonant.png?raw=true "Count Vowel Consonant challenge")
+
+<details>
+   
+   <summary>Solution</summary>
+
+   <p>
+
+   ```js
+   function countVowelConsonant(str) {
+     return str.split('').reduce((count, char) => ('aeiou'.indexOf(char) === -1 ? count + 2 : count + 1), 0);
+   }
+   ```
+
+   </p>
+
+</details>
+
+**********

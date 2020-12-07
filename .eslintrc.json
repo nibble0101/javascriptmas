@@ -12,6 +12,7 @@
         "ecmaVersion": 12
     },
     "rules": {
-        "no-console":"warn"
+        "no-console":"warn",
+        "max-len": ["error"]
     }
 }
