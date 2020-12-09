@@ -162,7 +162,8 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
    <p>
 
-     ```js
+   ```js
+
      function sumOddFibonacciNumbers(num) {
         if (num < 2) return 2;
 
@@ -179,10 +180,13 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
          }
 
          return sumOfOddFibNums;
-         
+
          }
+
      ```
 
    </p>
 
 </details>
+
+***********
