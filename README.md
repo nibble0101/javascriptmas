@@ -151,3 +151,38 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 </details>
 
 **********
+
+## Sum odd fibonacci numbers
+
+![sum odd fibonacci numbers challenge](questions/09-sum-odd-fibonacci-numbers.png?raw=true "Sum odd fibonacci numbers challenge")
+
+<details>
+   
+   <summary>Solution</summary>
+
+   <p>
+
+     ```js
+     function sumOddFibonacciNumbers(num) {
+        if (num < 2) return 2;
+
+        const cache = [1, 1];
+        let sumOfOddFibNums = 2;
+         
+         while (cache[0] + cache[1] <= num) {
+            const nextFibNum = cache[0] + cache[1];
+            if (nextFibNum % 2) {
+               sumOfOddFibNums += nextFibNum;
+            }
+            cache[0] = cache[1];
+            cache[1] = nextFibNum;
+         }
+
+         return sumOfOddFibNums;
+         
+         }
+     ```
+
+   </p>
+
+</details>
