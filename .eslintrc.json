@@ -13,6 +13,7 @@
     },
     "rules": {
         "no-console":"warn",
-        "max-len": ["error"]
+        "max-len": ["error"],
+        "prefer-destructuring": ["error", {"object": true, "array": false}]
     }
 }
