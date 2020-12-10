@@ -190,3 +190,39 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 </details>
 
 ***********
+
+## Adjacent elements product
+
+![adjacent elements product challenge](questions/10-adjacent-elements-product.png?raw=true "Adjacent elements product challenge")
+
+<details>
+   
+   <summary>Solution</summary>
+
+   <p>
+
+   ```js
+
+      function adjacentElementsProduct(nums) {
+
+         if (nums.length < 2) return nums[0];
+
+         let product = nums[0] * nums[1];
+         const lastIndex = nums.length - 1;
+
+         for (let i = 1; i < lastIndex; i++) {
+            if (nums[i] * nums[i + 1] > product) {
+               product = nums[i] * nums[i + 1];
+            }
+         }
+         return product;
+      }
+
+   ```
+
+
+   </p>
+
+</details>
+
+**********
