@@ -1,6 +1,6 @@
 # Javascriptmas
 
-This is a set of programming challenges from [scrimba.com](https://scrimba.com) dubbed [24 days of JavaScriptmas](https://scrimba.com/learn/adventcalendar). It runs from December 01, 2020 - December 23, 2020. Each day a JavaScript challenge is posted and participants are free to attempt and share their solution on twitter.
+This is a set of programming challenges from [scrimba.com](https://scrimba.com) dubbed [24 days of JavaScriptmas](https://scrimba.com/learn/adventcalendar). It runs from December 01, 2020 - December 24, 2020. Each day a JavaScript challenge is posted and participants are free to attempt and share their solution on twitter. On how to contribute, read the [contribution](/CONTRIBUTING.md) instructions.
 
 ## Challenges
 
@@ -111,7 +111,7 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
 **********
 
-## Sort by length
+### Sort by length
 
 ![sort by length challenge](questions/06-sort-by-length.png?raw=true "Sort by length challenge")
 
@@ -130,7 +130,7 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
 **********
 
-## Count Vowel Consonant
+### Count Vowel Consonant
 
 ![count vowel consonant challenge](questions/07-count-vowel-consonant.png?raw=true "Count Vowel Consonant challenge")
 
@@ -152,7 +152,7 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
 **********
 
-## Sum odd fibonacci numbers
+### Sum odd fibonacci numbers
 
 ![sum odd fibonacci numbers challenge](questions/09-sum-odd-fibonacci-numbers.png?raw=true "Sum odd fibonacci numbers challenge")
 
@@ -191,7 +191,7 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
 ***********
 
-## Adjacent elements product
+### Adjacent elements product
 
 ![adjacent elements product challenge](questions/10-adjacent-elements-product.png?raw=true "Adjacent elements product challenge")
 
