@@ -226,3 +226,36 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 </details>
 
 **********
+
+![avoid obstacles challenge](questions/11-avoid-obstacles.png?raw=true "Avoid obstacles challenge")
+
+<details>
+
+   <summary>Solution</solution>
+
+   <p>
+
+      ```js
+      
+      function avoidObstacles(nums) {
+         if (!Array.isArray(nums) || !nums.length) {
+            throw new Error('Requires integer array');
+         }
+
+         const largestObstacle = nums.reduce((prev, curr) => (curr > prev ? curr : prev));
+
+         for (let jump = 2; jump <= largestObstacle; jump += 1) {
+            if (nums.every((obstacle) => obstacle % jump !== 0)) {
+               return jump;
+            }
+         }
+         return largestObstacle + 1;
+      }
+
+      ```
+
+   </p>
+
+</details>
+
+**********
