@@ -253,7 +253,6 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
             }
             return largestObstacle + 1;
          }
-
       ```
 
    </p>
