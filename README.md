@@ -14,7 +14,7 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
      
   ```js
    function candies(children, candy) {
-   return Math.floor(candy / children) * children;
+     return Math.floor(candy / children) * children;
    }
   ```
     
@@ -96,7 +96,7 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 ![reverse a string challenge](questions/05-reverse-string.png?raw=true "Reverse a string challenge")
 
 <details>
-   <summary>Reverse a string</summary>
+   <summary>Solution</summary>
 
    <p>
 
