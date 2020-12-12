@@ -1,6 +1,6 @@
 # Javascriptmas
 
-This is a set of programming challenges from [scrimba.com](https://scrimba.com) dubbed [24 days of JavaScriptmas](https://scrimba.com/learn/adventcalendar). It runs from December 01, 2020 - December 24, 2020. Each day a JavaScript challenge is posted and participants are free to attempt and share their solution on twitter. On how to contribute, read the [contribution](/CONTRIBUTING.md) instructions.
+This is a set of programming challenges from [scrimba.com](https://scrimba.com) dubbed [24 days of JavaScriptmas](https://scrimba.com/learn/adventcalendar). It runs from December 01, 2020 - December 24, 2020. Each day a JavaScript challenge is posted and participants are free to attempt and share their solution on twitter. If you want to contribute to this set of solutions, read the [contribution](/CONTRIBUTING.md) instructions.
 
 ## Challenges
 
@@ -13,9 +13,9 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
    <p>
      
   ```js
-     function candies(children, candy) {
-      return Math.floor(candy / children) * children;
-    }
+   function candies(children, candy) {
+   return Math.floor(candy / children) * children;
+   }
   ```
     
    </p>
@@ -121,9 +121,9 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
    <p>
 
    ```js
-     function sortByLength(strs) {
-       return strs.sort((a, b) => a.length - b.length);
-     }
+   function sortByLength(strs) {
+      return strs.sort((a, b) => a.length - b.length);
+   }
    ```
    </p>
 </details>
@@ -164,24 +164,24 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
    ```js
 
-     function sumOddFibonacciNumbers(num) {
-        if (num < 2) return 2;
+   function sumOddFibonacciNumbers(num) {
+      if (num < 2) return 2;
 
-        const cache = [1, 1];
-        let sumOfOddFibNums = 2;
-         
-         while (cache[0] + cache[1] <= num) {
-            const nextFibNum = cache[0] + cache[1];
-            if (nextFibNum % 2) {
-               sumOfOddFibNums += nextFibNum;
-            }
-            cache[0] = cache[1];
-            cache[1] = nextFibNum;
+      const cache = [1, 1];
+      let sumOfOddFibNums = 2;
+      
+      while (cache[0] + cache[1] <= num) {
+         const nextFibNum = cache[0] + cache[1];
+         if (nextFibNum % 2) {
+            sumOfOddFibNums += nextFibNum;
          }
-
-         return sumOfOddFibNums;
-
+         cache[0] = cache[1];
+         cache[1] = nextFibNum;
       }
+
+      return sumOfOddFibNums;
+
+   }
 
    ```
 
@@ -203,20 +203,20 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
    ```js
 
-      function adjacentElementsProduct(nums) {
+   function adjacentElementsProduct(nums) {
 
-         if (nums.length < 2) return nums[0];
+      if (nums.length < 2) return nums[0];
 
-         let product = nums[0] * nums[1];
-         const lastIndex = nums.length - 1;
+      let product = nums[0] * nums[1];
+      const lastIndex = nums.length - 1;
 
-         for (let i = 1; i < lastIndex; i++) {
-            if (nums[i] * nums[i + 1] > product) {
-               product = nums[i] * nums[i + 1];
-            }
+      for (let i = 1; i < lastIndex; i++) {
+         if (nums[i] * nums[i + 1] > product) {
+            product = nums[i] * nums[i + 1];
          }
-         return product;
       }
+      return product;
+   }
 
    ```
 
@@ -238,20 +238,57 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
    <p>
 
    ```js
-      function avoidObstacles(nums) {
-         if (!Array.isArray(nums) || !nums.length) {
-            throw new Error('Requires integer array');
-         }
-
-         const largestObstacle = nums.reduce((prev, curr) => (curr > prev ? curr : prev));
-
-         for (let jump = 2; jump <= largestObstacle; jump += 1) {
-            if (nums.every((obstacle) => obstacle % jump !== 0)) {
-               return jump;
-            }
-         }
-         return largestObstacle + 1;
+   function avoidObstacles(nums) {
+      if (!Array.isArray(nums) || !nums.length) {
+         throw new Error('Requires integer array');
       }
+
+      const largestObstacle = nums.reduce((prev, curr) => (curr > prev ? curr : prev));
+
+      for (let jump = 2; jump <= largestObstacle; jump += 1) {
+         if (nums.every((obstacle) => obstacle % jump !== 0)) {
+            return jump;
+         }
+      }
+      return largestObstacle + 1;
+   }
+   ```
+
+   </p>
+
+</details>
+
+**********
+
+### Valid time
+
+![valid time challenge](questions/12-valid-time.png?raw=true "Valid time challenge")
+
+<details>
+
+   <summary>Solution</summary>
+
+   <p>
+
+   ```js
+   function validTime(str) {
+
+      if (typeof str !== 'string' || !str.includes(':')) {
+         return false;
+      }
+
+      let [hour, minutes] = str.trim().split(':');
+      hour = hour.trim();
+      minutes = minutes.trim();
+
+      if (/\D/.test(hour) || /\D/.test(minutes)) {
+         return false;
+      }
+
+      hour = parseInt(hour, 10);
+      minutes = parseInt(minutes, 10);
+      return hour >= 0 && hour < 24 && minutes >= 0 && minutes < 60;
+   }
    ```
 
    </p>
