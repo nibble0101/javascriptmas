@@ -4,6 +4,7 @@ function avoidObstacles(nums) {
   }
 
   const largestObstacle = nums.reduce((prev, curr) => (curr > prev ? curr : prev));
+  // ALT: const largestObstacle = Math.max(...nums)
 
   for (let jump = 2; jump <= largestObstacle; jump += 1) {
     if (nums.every((obstacle) => obstacle % jump !== 0)) {
