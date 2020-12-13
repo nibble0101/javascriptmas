@@ -296,3 +296,26 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 </details>
 
 **********
+
+### Extract each kth element
+
+![extract each kth element challenge](questions/13-extract-each-kth.png?raw=true "Extract each kth element challenge")
+
+
+<details>
+
+   <summary>Solution</summary>
+
+   <p>
+   
+   ```js
+
+   function extractEachKth(nums, index) {
+     return nums.filter((__, i) => (i + 1) % index !== 0);
+   }
+   
+   ```
+
+   </p>
+
+</details>
