@@ -1,4 +1,4 @@
-const { candies } = require('../solutions/01-candies');
+const { candies } = require('../solutions/01-01-candies');
 
 describe('tests/01-candies.test.js', () => {
   test('candies should be a function', () => {

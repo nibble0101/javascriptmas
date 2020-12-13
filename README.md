@@ -9,12 +9,25 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 ![candies challenge](questions/01-candies.png?raw=true "Candies challenge")
 
 <details>
-   <summary>Solution</summary>
+   <summary>Solution 1</summary>
    <p>
      
   ```js
    function candies(children, candy) {
      return Math.floor(candy / children) * children;
+   }
+  ```
+    
+   </p>
+</details>
+
+<details>
+   <summary>Solution 2</summary>
+   <p>
+     
+  ```js
+   function candies(children, candy) {
+      return candy - (candy % children);
    }
   ```
     
@@ -313,9 +326,11 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
    function extractEachKth(nums, index) {
      return nums.filter((__, i) => (i + 1) % index !== 0);
    }
-   
+
    ```
 
    </p>
 
 </details>
+
+**********
