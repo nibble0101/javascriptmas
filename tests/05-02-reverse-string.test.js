@@ -1,4 +1,4 @@
-const { reverseAString } = require('../solutions/05-reverse-string');
+const { reverseAString } = require('../solutions/05-02-reverse-string');
 
 describe('tests/05-reverse-string.test.js', () => {
   test('expect reverseAString to be a function', () => {

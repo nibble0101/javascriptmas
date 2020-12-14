@@ -109,13 +109,33 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 ![reverse a string challenge](questions/05-reverse-string.png?raw=true "Reverse a string challenge")
 
 <details>
-   <summary>Solution</summary>
+   <summary>Solution 1</summary>
 
    <p>
 
    ```js
    function reverseAString(str) {
       return str.split('').reverse().join('');
+   }
+   ```
+
+   </p>
+</details>
+
+<details>
+   <summary>Solution 2</summary>
+
+   <p>
+
+   ```js
+   function reverseAString(str) {
+      let reversedString = ''; const { length } = str;
+
+      for (let i = 0; i < length; i += 1) {
+      reversedString = str[i] + reversedString;
+      }
+
+      return reversedString;
    }
    ```
 
