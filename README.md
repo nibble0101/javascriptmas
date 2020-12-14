@@ -363,7 +363,7 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
 ### Array maximal adjacent difference
 
-![array maximal adjacent difference challenge](questions/14-array-maximal-diff.png?raw=true "Array maximal adjacent difference challenge")
+![array maximal adjacent difference challenge](questions/14-array-maximal-adjacent-diff.png?raw=true "Array maximal adjacent difference challenge")
 
 <details>
   <summary>Solution</summary>
@@ -395,3 +395,5 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
   </p>
 
 </details>
+
+**********
