@@ -19,6 +19,9 @@ describe('tests/14-array-maximal-adjacent-diff.js', () => {
   test('expect arrayMaximalAdjacentDifference([-2, -1, -23]) to be 22', () => {
     expect(arrayMaximalAdjacentDifference([-2, -1, -23])).toBe(22);
   });
+  test('expect arrayMaximalAdjacentDifference([-2, 1.5, 23]) to be close to 21.5', () => {
+    expect(arrayMaximalAdjacentDifference([-2, 1.5, 23])).toBeCloseTo(21.5);
+  });
   test('expect arrayMaximalAdjacentDifference([0, 0, 0]) to be 0', () => {
     expect(arrayMaximalAdjacentDifference([0, 0, 0])).toBe(0);
   });
