@@ -403,7 +403,7 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 ![JavaScript Carousel challenge](questions/15-javascrpt-carousel.png?raw=true "JavaScript Carousel Challenge")
 
 <detail>
-   <summary>Solution</solution>
+   <summary>Solution</summary>
 
    <p>
 
