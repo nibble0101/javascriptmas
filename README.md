@@ -402,7 +402,7 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
 ![JavaScript Carousel challenge](questions/15-javascrpt-carousel.png?raw=true "JavaScript Carousel Challenge")
 
-<detail>
+<details>
    <summary>Solution</summary>
 
    <p>
@@ -474,6 +474,6 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
    ```
    </p>
 
-</detail>
+</details>
 
 **********
