@@ -11,9 +11,11 @@
     "parserOptions": {
         "ecmaVersion": 12
     },
+    "overrides": [{"files": ["solutions/15-javascript-carousel.js"], "rules": {"no-plusplus":"off", "no-shadow":"off"}}],
     "rules": {
         "no-console":"warn",
         "max-len": ["error"],
         "prefer-destructuring": ["error", {"object": true, "array": false}]
+        
     }
 }
