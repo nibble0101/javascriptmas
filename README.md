@@ -477,3 +477,27 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 </details>
 
 **********
+
+### Insert Dashes
+
+![insert dashes challenge](questions/16-insert-dashes.png?raw=true "Insert Dashes Challenge")
+
+<details>
+   <summary>Solution</summary>
+
+   <p>
+   
+   ```js
+   function insertDashes(str) {
+      return str
+         .split(' ')
+         .map((word) => word.split('').join('-'))
+         .join(' ');
+   }
+   ```
+
+   </p>
+
+</details>
+
+**********
