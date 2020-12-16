@@ -430,9 +430,9 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
          return;
       }
       nextButton.style.opacity = 1;
-      }
+   }
 
-      function translateGallery(visibleImageId) {
+   function translateGallery(visibleImageId) {
       const currentVisibleImage = document.querySelector('.current');
 
       currentVisibleImage.classList.remove('current');
