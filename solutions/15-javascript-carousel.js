@@ -48,7 +48,7 @@ function nextButtonClickHandler() {
 
   translateGallery(++visibleImageId);
 
-  if (visibleImageId === 4) {
+  if (visibleImageId === imageCount - 1) {
     toggleNextButtonBlur('LOWER_OPACITY');
     return;
   }
