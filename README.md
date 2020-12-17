@@ -553,7 +553,7 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
 <details>
    
-   <summary>Solution 2</summary>
+   <summary>Solution 3</summary>
 
    <p>
 
