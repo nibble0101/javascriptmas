@@ -551,4 +551,30 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
 </details>
 
+<details>
+   
+   <summary>Solution 2</summary>
+
+   <p>
+
+   ```js
+   function differentSymbolsNaive(str) {
+      if (typeof str !== 'string') {
+         throw new Error('Invalid input');
+      }
+      const uniqueChars = {};
+      return str.split('').reduce((charCount, char) => {
+         if (uniqueChars[char]) {
+            return charCount;
+         }
+         uniqueChars[char] = char;
+         return charCount + 1;
+      }, 0);
+   }
+   ```
+
+   </p>
+
+</details>
+
 **********
