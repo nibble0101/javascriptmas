@@ -501,3 +501,54 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 </details>
 
 **********
+
+### Different symbols naive
+
+![different symbols naive](questions/17-different-symbols-naive.png?raw=true "Different symbols naive challenge")
+
+<details>
+   
+   <summary>Solution 1</summary>
+
+   <p>
+
+   ```js
+   function differentSymbolsNaive(str) {
+      if (typeof str !== 'string') {
+         throw new Error('Invalid input');
+      }
+      let uniqueChars = '';
+      const { length } = str;
+      for (let i = 0; i < length; i += 1) {
+         if (!uniqueChars.includes(str[i])) {
+            uniqueChars += str[i];
+         }
+      }
+      return uniqueChars.length;
+   }
+   ```
+
+   </p>
+
+</details>
+
+<details>
+   
+   <summary>Solution 2</summary>
+
+   <p>
+
+   ```js
+   function differentSymbolsNaive(str) {
+      if (typeof str !== 'string') {
+         throw new Error('Invalid input');
+      }
+      return new Set(str).size;
+   }
+   ```
+
+   </p>
+
+</details>
+
+**********
