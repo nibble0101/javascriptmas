@@ -578,3 +578,81 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 </details>
 
 **********
+
+### Array previous less
+
+![array previous less challenge](questions/18-array-previous-less.png?raw=true "Array Previous Less Challenge")
+
+<details>
+
+   <summary>Solution 1</summary>
+   <p>
+
+   ```js
+   function arrayPreviousLess(nums) {
+
+      if (!Array.isArray(nums)) {
+         throw new Error('Invalid input');
+      }
+
+      const { length } = nums;
+      const arrayClone = [...nums];
+
+      /* eslint-disable*/
+      // Until figure out alternative to label
+      outerLoop: for (let i = 0; i < length; i += 1) {
+         if (typeof nums[i] !== 'number') {
+            throw new Error('Invalid input');
+         }
+         for (let j = i - 1; j >= 0; j -= 1) {
+            if (nums[i] > nums[j]) {
+            arrayClone[i] = nums[j];
+            continue outerLoop;
+            }
+         }
+         arrayClone[i] = -1;
+      }
+
+      return arrayClone;
+      
+      }
+   ```
+   </p>
+
+</details>
+
+<details>
+
+   <summary>Solution 2</summary>
+   <p>
+
+   ```js
+   function arrayPreviousLess(nums) {
+
+      if (!Array.isArray(nums)) {
+         throw new Error('Invalid input');
+      }
+
+      const arrayClone = [...nums];
+
+      nums.forEach((element, index) => {
+         if (typeof element !== 'number') {
+            throw new Error('Invalid input');
+         }
+         for (let i = index - 1; i >= 0; i -= 1) {
+            if (element > nums[i]) {
+            arrayClone[index] = nums[i];
+            return;
+            }
+         }
+         arrayClone[index] = -1;
+      });
+
+      return arrayClone;
+   }
+   ```
+   </p>
+
+</details>
+
+**********
