@@ -688,11 +688,7 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
       }
 
       const lastCharCode = lowerCaseStr[lastIndex];
-      if (lastCharCode < 97 || lastCharCode > 122) {
-         return false;
-      }
-
-      return true;
+      return !(lastCharCode < 97 || lastCharCode > 122);
    }
 
    ```
