@@ -15,6 +15,7 @@
     "rules": {
         "no-console":"warn",
         "max-len": ["error"],
+        "no-labels":["off", { "allowLoop": true }],
         "prefer-destructuring": ["error", {"object": true, "array": false}]
         
     }

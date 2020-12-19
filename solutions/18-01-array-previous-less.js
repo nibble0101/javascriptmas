@@ -5,8 +5,7 @@ function arrayPreviousLess(nums) {
   const { length } = nums;
   const arrayClone = [...nums];
 
-  /* eslint-disable*/
-  // Until figure out alternative to label
+  // eslint-disable-next-line no-restricted-syntax
   outerLoop: for (let i = 0; i < length; i += 1) {
     if (typeof nums[i] !== 'number') {
       throw new Error('Invalid input');
@@ -14,6 +13,7 @@ function arrayPreviousLess(nums) {
     for (let j = i - 1; j >= 0; j -= 1) {
       if (nums[i] > nums[j]) {
         arrayClone[i] = nums[j];
+        // eslint-disable-next-line no-continue
         continue outerLoop;
       }
     }
