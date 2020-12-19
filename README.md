@@ -656,3 +656,48 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 </details>
 
 **********
+
+### Alphabet subsequence
+
+![alphabet subsequence challenge](questions/19-aphabet-subsequence.png?raw=true "Alphabet Subsequence Challenge")
+
+<details>
+
+   <summary>Solution</summary>
+
+   <p>
+
+   ```js
+   function alphabetSubsequence(str) {
+      if (typeof str !== 'string' || !str.length) {
+         throw new Error('Invalid input');
+      }
+
+      const lowerCaseStr = str.toLowerCase();
+      const lastIndex = str.length - 1;
+
+      for (let i = 0; i < lastIndex; i += 1) {
+         const thisCharCode = lowerCaseStr.charCodeAt(i);
+         const nextCharCode = lowerCaseStr.charCodeAt(i + 1);
+         if (nextCharCode <= thisCharCode) {
+            return false;
+         }
+         if (thisCharCode < 97 || thisCharCode > 122) {
+            return false;
+         }
+      }
+
+      const lastCharCode = lowerCaseStr[lastIndex];
+      if (lastCharCode < 97 || lastCharCode > 122) {
+         return false;
+      }
+
+      return true;
+   }
+
+   ```
+   </p>
+   
+</details>
+
+**********
