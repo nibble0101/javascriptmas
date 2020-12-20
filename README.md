@@ -697,3 +697,41 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 </details>
 
 **********
+
+### Domain types
+
+![domain types challenge](questions/20-domain-type.png?raw=true "Domain Types Challenge")
+
+<details>
+
+   <summary>Solution</summary>
+
+   <p>
+
+   ```js
+   /* eslint-disable consistent-return */
+   /* eslint-disable array-callback-return */
+
+   function domainType(domains) {
+      return domains.map((domain) => {
+         const domainNameComponents = domain.split('.');
+         const TLD = domainNameComponents[domainNameComponents.length - 1];
+         switch (TLD) {
+            case 'com':
+            return 'commercial';
+            case 'org':
+            return 'organization';
+            case 'net':
+            return 'network';
+            case 'info':
+            return 'information';
+            default:
+         }
+      });
+   }
+   ```
+   </p>
+
+</details>
+
+**********
