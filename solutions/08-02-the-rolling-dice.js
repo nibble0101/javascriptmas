@@ -1,5 +1,4 @@
 /*eslint-disable*/
-// Partial solution. Need to upload the html and CSS files
 const die = document.querySelector('.die');
 const score = document.createElement('p');
 const body = document.querySelector('body');
