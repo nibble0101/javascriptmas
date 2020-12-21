@@ -743,7 +743,7 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
 <details>
     
-   <summary>Solution</solution>
+   <summary>Solution</summary>
 
    <p>
    
