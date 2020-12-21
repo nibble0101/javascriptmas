@@ -735,3 +735,32 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 </details>
 
 **********
+
+### Sum of 2
+
+
+![sum of 2 challenge](questions/21-sum-of-2.png?raw=true "Sum Of 2 Challenge")
+
+<details>
+    
+   <summary>Solution</solution>
+
+   <p>
+   
+   ```js
+   function sumOfTwo(nums1, nums2, value) {
+      for (let i = 0; i < nums1.length; i += 1) {
+         for (let j = 0; j < nums2.length; j += 1) {
+            if (nums1[i] + nums2[j] === value) {
+            return true;
+            }
+         }
+      }
+      return false;
+   }
+   ```
+   </p>
+
+</details>
+
+**********
