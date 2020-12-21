@@ -4,8 +4,8 @@
 function domainType(domains) {
   return domains.map((domain) => {
     const domainNameComponents = domain.split('.');
-    const TLD = domainNameComponents[domainNameComponents.length - 1];
-    switch (TLD) {
+    const topLevelDomain = domainNameComponents[domainNameComponents.length - 1];
+    switch (topLevelDomain) {
       case 'com':
         return 'commercial';
       case 'org':
