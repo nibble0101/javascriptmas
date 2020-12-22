@@ -764,3 +764,23 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 </details>
 
 **********
+
+### Extract matrix column
+
+![extract matrix column challenge](questions/22-extract-matrix-column.png?raw=true "Extract Matrix Column Challenge")
+
+<details>
+
+   <summary>Solution</summary>
+
+   <p>
+   
+   ```js
+   function extractMatrixColumn(matrix, column) {
+      return matrix.map((row) => row[column]);
+   }
+   ```
+   </p>
+
+
+</details>
