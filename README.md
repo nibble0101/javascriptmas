@@ -784,3 +784,78 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
 
 </details>
+
+**********
+
+### Tweet Input Component
+
+![tweet input component](questions/23-tweet-input-component.png?raw=true "Tweet Input Component Challenge")
+
+<details>
+
+  <summary> Solution </summary>
+
+  <p>
+  
+  ```js
+   const tweetButton = document.getElementById('btn');
+   const form = document.getElementById('form');
+   const textArea = document.getElementById('string');
+   const tweetCharactersLeftSpan = document.getElementById('tweet-characters-left');
+   const tweetCharactersCountWrapper = document.querySelector('.tweet-characters-count-wrapper');
+   const warningText = document.querySelector('.warning-text');
+   const body = document.querySelector('body');
+   const tweetBaseUrl = 'https://twitter.com/intent/tweet';
+
+   function emitWarning(){
+      tweetCharactersCountWrapper.classList.add('warning');
+   }
+   function removeWarning(){
+      tweetCharactersCountWrapper.classList.remove('warning');
+   }
+   function removeWarningText(){
+      warningText.classList.remove('display-warning-text');
+   }
+   function disableTweetButton(){
+      tweetButton.classList.add('buttonDisabled');
+   }
+   function enableTweetButton(){
+      tweetButton.classList.remove('buttonDisabled');
+   }
+   function createTweetHandler(event){
+      const tweetCharsLeft = 140 - event.target.value.length
+      tweetCharactersLeftSpan.innerText = tweetCharsLeft;
+      form.setAttribute('action', `${tweetBaseUrl}?text=${event.target.value}`);
+      removeWarningText();
+      if(tweetCharsLeft < 21){
+         emitWarning();
+      }else{
+         removeWarning();
+      }
+      
+      if(tweetCharsLeft < 0){
+         disableTweetButton();
+      }else{
+         enableTweetButton(); 
+      }   
+   }
+
+   function shareTweetHandler(event){
+      event.preventDefault(); //Scrimba throws if ommitted
+      const charLeft = parseInt(tweetCharactersLeftSpan.innerText);
+      if(charLeft < 0){
+         warningText.classList.add('display-warning-text');;
+         return;
+      } 
+      console.log('Yay! Message successfully tweeted');
+   }
+
+   textArea.addEventListener('input', createTweetHandler);
+   tweetButton.addEventListener('click', shareTweetHandler);
+  ```
+
+  </p>
+
+</details>
+
+**********
