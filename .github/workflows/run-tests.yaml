@@ -44,6 +44,9 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Run tests
       run: |
+         echo "Installing dependencies"
+         npm ci
+         echo "Finished installing dependencies"
          echo "Running tests"
          npm test
          echo "Finished running tests"
