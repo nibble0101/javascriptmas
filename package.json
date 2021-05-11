@@ -17,7 +17,7 @@
     "test",
     "post-test-message",
     "pre-lint-message",
-    "lint",
+    "fix-lint",
     "post-lint-message"
   ],
   "pre-commit.silent": true,
