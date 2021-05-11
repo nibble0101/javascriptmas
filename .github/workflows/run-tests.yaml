@@ -47,9 +47,9 @@ jobs:
          echo "Installing dependencies"
          npm ci
          echo "Finished installing dependencies"
-         echo "Running fix-lint"
-         npm fix-lint
-         echo "Finished running fix-lint"
+         echo "Running lint"
+         npm lint
+         echo "Finished running lint"
 
   
   test:
