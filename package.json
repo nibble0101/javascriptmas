@@ -4,7 +4,7 @@
   "description": "This is a set of challenges and solutions in JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "jest --ci --coverage && codecov",
+    "test": "jest",
     "lint": "npx eslint '**/*.js' --ignore-pattern node_modules/",
     "fix-lint": "npx eslint '**/*.js' --ignore-pattern node_modules/ --fix",
     "pre-test-message": "echo \" Running tests \" && exit 0",
@@ -24,7 +24,6 @@
   "author": "Joseph Mawa",
   "license": "ISC",
   "devDependencies": {
-    "codecov": "^3.8.2",
     "eslint": "^7.26.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",

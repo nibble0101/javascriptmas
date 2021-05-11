@@ -67,15 +67,6 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - uses: actions/checkout@master
-    - uses: codecov/codecov-action@v1
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }} 
-        files: ./coverage1.xml,./coverage2.xml 
-        flags: unittests
-        name: codecov-umbrella 
-        fail_ci_if_error: true 
-        verbose: true 
     - name: Run tests
       run: |
          echo "Installing dependencies"
