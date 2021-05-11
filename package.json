@@ -5,13 +5,20 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "pre-test-message": "echo \"First running tests before committing \" && exit 0",
-    "post-test-message": "echo \"Finished running tests \" && exit 0"
+    "lint": "npx eslint '**/*.js' --ignore-pattern node_modules/",
+    "fix-lint": "npx eslint '**/*.js' --ignore-pattern node_modules/ --fix",
+    "pre-test-message": "echo \" Running tests \" && exit 0",
+    "post-test-message": "echo \"Finished running tests \" && exit 0",
+    "pre-lint-message": "echo \" Running lint \" && exit 0",
+    "post-lint-message": "echo \"Finished running lint \" && exit 0"
   },
   "pre-commit": [
     "pre-test-message",
     "test",
-    "post-test-message"
+    "post-test-message",
+    "pre-lint-message",
+    "fix-lint",
+    "post-lint-message"
   ],
   "pre-commit.silent": true,
   "author": "Joseph Mawa",
