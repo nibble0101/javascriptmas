@@ -48,7 +48,7 @@ jobs:
          npm ci
          echo "Finished installing dependencies"
          echo "Running lint"
-         npm lint
+         npm run fix-lint
          echo "Finished running lint"
 
   
@@ -73,6 +73,6 @@ jobs:
          npm ci
          echo "Finished installing dependencies"
          echo "Running tests"
-         npm test
+         npm run test
          echo "Finished running tests"
 
