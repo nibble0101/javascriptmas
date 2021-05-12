@@ -1,5 +1,7 @@
 # Javascriptmas
 
+[![codecov](https://codecov.io/gh/nibble0101/javascriptmas/branch/master/graph/badge.svg?token=EBZ5VCCZDU)](https://codecov.io/gh/nibble0101/javascriptmas)
+
 This is a set of programming challenges from [scrimba.com](https://scrimba.com) dubbed [24 days of JavaScriptmas](https://scrimba.com/learn/adventcalendar). It runs from December 01, 2020 - December 24, 2020. Each day a JavaScript challenge is posted and participants are free to attempt and share their solution on twitter. If you want to contribute to this set of solutions, read the [contribution](/CONTRIBUTING.md) instructions.
 
 ## Challenges
@@ -34,7 +36,7 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
    </p>
 </details>
 
-**********
+---
 
 ### Deposit profit
 
@@ -44,17 +46,17 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
    <summary>Solution</summary>
    <p>
 
-  ```js
-   function depositProfit(deposit, rate, threshold) {
-    const years = Math.log(threshold / deposit) / Math.log(1 + rate / 100);
-    return Number.isInteger(years) ? years + 1 : Math.ceil(years);
-  }
-  ```
+```js
+function depositProfit(deposit, rate, threshold) {
+  const years = Math.log(threshold / deposit) / Math.log(1 + rate / 100);
+  return Number.isInteger(years) ? years + 1 : Math.ceil(years);
+}
+```
 
    </p>
 </details>
 
-**********
+---
 
 ### Chunkey monkey
 
@@ -64,22 +66,22 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
   <summary>Solution</summary>
   <p>
 
-  ```js
-  function chunkyMonkey(values, size) {
-    const chunkedArray = [];
-    const arrayLength = values.length;
-    for(let i = 0; i < arrayLength; i += size){
-        chunkedArray.push(values.slice(i, i + size));
-    }
-    return chunkedArray;
+```js
+function chunkyMonkey(values, size) {
+  const chunkedArray = [];
+  const arrayLength = values.length;
+  for (let i = 0; i < arrayLength; i += size) {
+    chunkedArray.push(values.slice(i, i + size));
   }
-  ```
+  return chunkedArray;
+}
+```
 
   </p>
 
 </details>
 
-**********
+---
 
 ### Century from year
 
@@ -90,19 +92,17 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
    <p>
 
-   ```js
-
-   function centuryFromYear(num) {
-      return num % 100 ? Math.ceil(num/100): num/100;
-   }
-
-   ```
+```js
+function centuryFromYear(num) {
+  return num % 100 ? Math.ceil(num / 100) : num / 100;
+}
+```
 
    </p>
 
 </details>
 
-***********
+---
 
 ### Reverse a string
 
@@ -113,11 +113,11 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
    <p>
 
-   ```js
-   function reverseAString(str) {
-      return str.split('').reverse().join('');
-   }
-   ```
+```js
+function reverseAString(str) {
+  return str.split("").reverse().join("");
+}
+```
 
    </p>
 </details>
@@ -127,22 +127,23 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
    <p>
 
-   ```js
-   function reverseAString(str) {
-      let reversedString = ''; const { length } = str;
+```js
+function reverseAString(str) {
+  let reversedString = "";
+  const { length } = str;
 
-      for (let i = 0; i < length; i += 1) {
-        reversedString = str[i] + reversedString;
-      }
+  for (let i = 0; i < length; i += 1) {
+    reversedString = str[i] + reversedString;
+  }
 
-      return reversedString;
-   }
-   ```
+  return reversedString;
+}
+```
 
    </p>
 </details>
 
-**********
+---
 
 ### Sort by length
 
@@ -153,15 +154,16 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
    <summary>Solution</summary>
    <p>
 
-   ```js
-   function sortByLength(strs) {
-      return strs.sort((a, b) => a.length - b.length);
-   }
-   ```
+```js
+function sortByLength(strs) {
+  return strs.sort((a, b) => a.length - b.length);
+}
+```
+
    </p>
 </details>
 
-**********
+---
 
 ### Count Vowel Consonant
 
@@ -173,17 +175,22 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
    <p>
 
-   ```js
-   function countVowelConsonant(str) {
-     return str.split('').reduce((count, char) => ('aeiou'.indexOf(char) === -1 ? count + 2 : count + 1), 0);
-   }
-   ```
+```js
+function countVowelConsonant(str) {
+  return str
+    .split("")
+    .reduce(
+      (count, char) => ("aeiou".indexOf(char) === -1 ? count + 2 : count + 1),
+      0
+    );
+}
+```
 
    </p>
 
 </details>
 
-**********
+---
 
 ### Sum odd fibonacci numbers
 
@@ -195,34 +202,31 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
    <p>
 
-   ```js
+```js
+function sumOddFibonacciNumbers(num) {
+  if (num < 2) return 2;
 
-   function sumOddFibonacciNumbers(num) {
-      if (num < 2) return 2;
+  const cache = [1, 1];
+  let sumOfOddFibNums = 2;
 
-      const cache = [1, 1];
-      let sumOfOddFibNums = 2;
-      
-      while (cache[0] + cache[1] <= num) {
-         const nextFibNum = cache[0] + cache[1];
-         if (nextFibNum % 2) {
-            sumOfOddFibNums += nextFibNum;
-         }
-         cache[0] = cache[1];
-         cache[1] = nextFibNum;
-      }
+  while (cache[0] + cache[1] <= num) {
+    const nextFibNum = cache[0] + cache[1];
+    if (nextFibNum % 2) {
+      sumOfOddFibNums += nextFibNum;
+    }
+    cache[0] = cache[1];
+    cache[1] = nextFibNum;
+  }
 
-      return sumOfOddFibNums;
-
-   }
-
-   ```
+  return sumOfOddFibNums;
+}
+```
 
    </p>
 
 </details>
 
-***********
+---
 
 ### Adjacent elements product
 
@@ -234,31 +238,27 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
    <p>
 
-   ```js
+```js
+function adjacentElementsProduct(nums) {
+  if (nums.length < 2) return nums[0];
 
-   function adjacentElementsProduct(nums) {
+  let product = nums[0] * nums[1];
+  const lastIndex = nums.length - 1;
 
-      if (nums.length < 2) return nums[0];
-
-      let product = nums[0] * nums[1];
-      const lastIndex = nums.length - 1;
-
-      for (let i = 1; i < lastIndex; i++) {
-         if (nums[i] * nums[i + 1] > product) {
-            product = nums[i] * nums[i + 1];
-         }
-      }
-      return product;
-   }
-
-   ```
-
+  for (let i = 1; i < lastIndex; i++) {
+    if (nums[i] * nums[i + 1] > product) {
+      product = nums[i] * nums[i + 1];
+    }
+  }
+  return product;
+}
+```
 
    </p>
 
 </details>
 
-**********
+---
 
 ### Avoid obstacles
 
@@ -270,34 +270,34 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
    <p>
 
-   ```js
-   function avoidObstacles(nums) {
-      if (!Array.isArray(nums) || !nums.length) {
-         throw new Error('Requires integer array');
-      }
+```js
+function avoidObstacles(nums) {
+  if (!Array.isArray(nums) || !nums.length) {
+    throw new Error("Requires integer array");
+  }
 
-      const largestObstacle = Math.max(...nums);
-      /*
-         OR:
-         const largestObstacle = nums.reduce((prev, curr) => {
-             return curr > prev ? curr : prev;
-         });
-      */
+  const largestObstacle = Math.max(...nums);
+  /*
+      OR:
+      const largestObstacle = nums.reduce((prev, curr) => {
+          return curr > prev ? curr : prev;
+      });
+   */
 
-      for (let jump = 2; jump <= largestObstacle; jump += 1) {
-         if (nums.every((obstacle) => obstacle % jump !== 0)) {
-            return jump;
-         }
-      }
-      return largestObstacle + 1;
-   }
-   ```
+  for (let jump = 2; jump <= largestObstacle; jump += 1) {
+    if (nums.every((obstacle) => obstacle % jump !== 0)) {
+      return jump;
+    }
+  }
+  return largestObstacle + 1;
+}
+```
 
    </p>
 
 </details>
 
-**********
+---
 
 ### Valid time
 
@@ -309,37 +309,35 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
    <p>
 
-   ```js
-   function validTime(str) {
+```js
+function validTime(str) {
+  if (typeof str !== "string" || !str.includes(":")) {
+    return false;
+  }
 
-      if (typeof str !== 'string' || !str.includes(':')) {
-         return false;
-      }
+  let [hour, minutes] = str.trim().split(":");
+  hour = hour.trim();
+  minutes = minutes.trim();
 
-      let [hour, minutes] = str.trim().split(':');
-      hour = hour.trim();
-      minutes = minutes.trim();
+  if (/\D/.test(hour) || /\D/.test(minutes)) {
+    return false;
+  }
 
-      if (/\D/.test(hour) || /\D/.test(minutes)) {
-         return false;
-      }
-
-      hour = parseInt(hour, 10);
-      minutes = parseInt(minutes, 10);
-      return hour >= 0 && hour < 24 && minutes >= 0 && minutes < 60;
-   }
-   ```
+  hour = parseInt(hour, 10);
+  minutes = parseInt(minutes, 10);
+  return hour >= 0 && hour < 24 && minutes >= 0 && minutes < 60;
+}
+```
 
    </p>
 
 </details>
 
-**********
+---
 
 ### Extract each kth element
 
 ![extract each kth element challenge](questions/13-extract-each-kth.png?raw=true "Extract each kth element challenge")
-
 
 <details>
 
@@ -349,13 +347,13 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
    
    ```js
 
-   function extractEachKth(nums, index) {
-     return nums.filter((__, i) => (i + 1) % index !== 0);
-   }
+function extractEachKth(nums, index) {
+return nums.filter((\_\_, i) => (i + 1) % index !== 0);
+}
 
-   ```
+````
 
-   </p>
+</p>
 
 </details>
 
@@ -366,37 +364,38 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 ![array maximal adjacent difference challenge](questions/14-array-maximal-adjacent-diff.png?raw=true "Array maximal adjacent difference challenge")
 
 <details>
-  <summary>Solution</summary>
+<summary>Solution</summary>
 
-  <p>
+<p>
 
-  ```js
-  function arrayMaximalAdjacentDifference(nums) {
+```js
+function arrayMaximalAdjacentDifference(nums) {
 
-      if (!Array.isArray(nums) || !nums.length) {
-         throw new Error('Invalid argument');
-      }
-
-      if (nums.length < 2) return nums[0];
-
-      let maxAbsoluteDiff = Math.abs(nums[0] - nums[1]);
-      const lastIndex = nums.length - 1;
-
-      for (let i = 1; i < lastIndex; i += 1) {
-         const diff = Math.abs(nums[i] - nums[i + 1]);
-         if (maxAbsoluteDiff < diff) {
-            maxAbsoluteDiff = diff;
-         }
-      }
-
-      return maxAbsoluteDiff;
+   if (!Array.isArray(nums) || !nums.length) {
+      throw new Error('Invalid argument');
    }
-  ```
+
+   if (nums.length < 2) return nums[0];
+
+   let maxAbsoluteDiff = Math.abs(nums[0] - nums[1]);
+   const lastIndex = nums.length - 1;
+
+   for (let i = 1; i < lastIndex; i += 1) {
+      const diff = Math.abs(nums[i] - nums[i + 1]);
+      if (maxAbsoluteDiff < diff) {
+         maxAbsoluteDiff = diff;
+      }
+   }
+
+   return maxAbsoluteDiff;
+}
+````
+
   </p>
 
 </details>
 
-**********
+---
 
 ### JavaScript Carousel
 
@@ -407,76 +406,75 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
    <p>
 
-   ```js
-   const previousButton = document.querySelector('.previous');
-   const nextButton = document.querySelector('.next');
-   const allImages = document.querySelectorAll('img.card');
-   const gallery = document.querySelector('.gallery');
-   const imageCount = allImages.length;
+```js
+const previousButton = document.querySelector(".previous");
+const nextButton = document.querySelector(".next");
+const allImages = document.querySelectorAll("img.card");
+const gallery = document.querySelector(".gallery");
+const imageCount = allImages.length;
 
-   let visibleImageId = 0;
+let visibleImageId = 0;
 
-   function togglePreviousButtonBlur(action = 'INCREASE_OPACITY') {
-      if (action === 'LOWER_OPACITY') {
-         previousButton.style.opacity = 0.3;
-         return;
-      }
-      previousButton.style.opacity = 1;
-   }
+function togglePreviousButtonBlur(action = "INCREASE_OPACITY") {
+  if (action === "LOWER_OPACITY") {
+    previousButton.style.opacity = 0.3;
+    return;
+  }
+  previousButton.style.opacity = 1;
+}
 
-   function toggleNextButtonBlur(action = 'INCREASE_OPACITY') {
-      if (action === 'LOWER_OPACITY') {
-         nextButton.style.opacity = 0.3;
-         return;
-      }
-      nextButton.style.opacity = 1;
-   }
+function toggleNextButtonBlur(action = "INCREASE_OPACITY") {
+  if (action === "LOWER_OPACITY") {
+    nextButton.style.opacity = 0.3;
+    return;
+  }
+  nextButton.style.opacity = 1;
+}
 
-   function translateGallery(visibleImageId) {
-      const currentVisibleImage = document.querySelector('.current');
+function translateGallery(visibleImageId) {
+  const currentVisibleImage = document.querySelector(".current");
 
-      currentVisibleImage.classList.remove('current');
-      allImages[visibleImageId].classList.add('current');
-      gallery.style.transform = `translateX(${visibleImageId * -220}px)`;
-   }
+  currentVisibleImage.classList.remove("current");
+  allImages[visibleImageId].classList.add("current");
+  gallery.style.transform = `translateX(${visibleImageId * -220}px)`;
+}
 
-   function previousButtonClickHandler() {
-      if (visibleImageId === 0) return;
+function previousButtonClickHandler() {
+  if (visibleImageId === 0) return;
 
-      translateGallery(--visibleImageId);
+  translateGallery(--visibleImageId);
 
-      if (visibleImageId === 0) {
-         togglePreviousButtonBlur('LOWER_OPACITY');
-         return;
-      }
+  if (visibleImageId === 0) {
+    togglePreviousButtonBlur("LOWER_OPACITY");
+    return;
+  }
 
-      togglePreviousButtonBlur();
-      toggleNextButtonBlur();
-   }
+  togglePreviousButtonBlur();
+  toggleNextButtonBlur();
+}
 
-   function nextButtonClickHandler() {
-      if (visibleImageId === imageCount - 1) return;
+function nextButtonClickHandler() {
+  if (visibleImageId === imageCount - 1) return;
 
-      translateGallery(++visibleImageId);
+  translateGallery(++visibleImageId);
 
-      if (visibleImageId === imageCount - 1) {
-         toggleNextButtonBlur('LOWER_OPACITY');
-         return;
-      }
-      toggleNextButtonBlur();
-      togglePreviousButtonBlur();
-   }
+  if (visibleImageId === imageCount - 1) {
+    toggleNextButtonBlur("LOWER_OPACITY");
+    return;
+  }
+  toggleNextButtonBlur();
+  togglePreviousButtonBlur();
+}
 
-   previousButton.addEventListener('click', previousButtonClickHandler);
-   nextButton.addEventListener('click', nextButtonClickHandler);
+previousButton.addEventListener("click", previousButtonClickHandler);
+nextButton.addEventListener("click", nextButtonClickHandler);
+```
 
-
-   ```
    </p>
 
 </details>
 
-**********
+---
 
 ### Insert Dashes
 
@@ -500,7 +498,7 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
 </details>
 
-**********
+---
 
 ### Different symbols naive
 
@@ -512,21 +510,21 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
    <p>
 
-   ```js
-   function differentSymbolsNaive(str) {
-      if (typeof str !== 'string') {
-         throw new Error('Invalid input');
-      }
-      let uniqueChars = '';
-      const { length } = str;
-      for (let i = 0; i < length; i += 1) {
-         if (!uniqueChars.includes(str[i])) {
-            uniqueChars += str[i];
-         }
-      }
-      return uniqueChars.length;
-   }
-   ```
+```js
+function differentSymbolsNaive(str) {
+  if (typeof str !== "string") {
+    throw new Error("Invalid input");
+  }
+  let uniqueChars = "";
+  const { length } = str;
+  for (let i = 0; i < length; i += 1) {
+    if (!uniqueChars.includes(str[i])) {
+      uniqueChars += str[i];
+    }
+  }
+  return uniqueChars.length;
+}
+```
 
    </p>
 
@@ -538,14 +536,14 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
    <p>
 
-   ```js
-   function differentSymbolsNaive(str) {
-      if (typeof str !== 'string') {
-         throw new Error('Invalid input');
-      }
-      return new Set(str).size;
-   }
-   ```
+```js
+function differentSymbolsNaive(str) {
+  if (typeof str !== "string") {
+    throw new Error("Invalid input");
+  }
+  return new Set(str).size;
+}
+```
 
    </p>
 
@@ -557,27 +555,27 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
    <p>
 
-   ```js
-   function differentSymbolsNaive(str) {
-      if (typeof str !== 'string') {
-         throw new Error('Invalid input');
-      }
-      const uniqueChars = {};
-      return str.split('').reduce((charCount, char) => {
-         if (uniqueChars[char]) {
-            return charCount;
-         }
-         uniqueChars[char] = char;
-         return charCount + 1;
-      }, 0);
-   }
-   ```
+```js
+function differentSymbolsNaive(str) {
+  if (typeof str !== "string") {
+    throw new Error("Invalid input");
+  }
+  const uniqueChars = {};
+  return str.split("").reduce((charCount, char) => {
+    if (uniqueChars[char]) {
+      return charCount;
+    }
+    uniqueChars[char] = char;
+    return charCount + 1;
+  }, 0);
+}
+```
 
    </p>
 
 </details>
 
-**********
+---
 
 ### Array previous less
 
@@ -588,35 +586,34 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
    <summary>Solution 1</summary>
    <p>
 
-   ```js
-   function arrayPreviousLess(nums) {
+```js
+function arrayPreviousLess(nums) {
+  if (!Array.isArray(nums)) {
+    throw new Error("Invalid input");
+  }
 
-      if (!Array.isArray(nums)) {
-         throw new Error('Invalid input');
+  const { length } = nums;
+  const arrayClone = [...nums];
+
+  // eslint-disable-next-line no-restricted-syntax
+  outerLoop: for (let i = 0; i < length; i += 1) {
+    if (typeof nums[i] !== "number") {
+      throw new Error("Invalid input");
+    }
+    for (let j = i - 1; j >= 0; j -= 1) {
+      if (nums[i] > nums[j]) {
+        arrayClone[i] = nums[j];
+        // eslint-disable-next-line no-continue
+        continue outerLoop;
       }
+    }
+    arrayClone[i] = -1;
+  }
 
-      const { length } = nums;
-      const arrayClone = [...nums];
+  return arrayClone;
+}
+```
 
-      // eslint-disable-next-line no-restricted-syntax
-      outerLoop: for (let i = 0; i < length; i += 1) {
-         if (typeof nums[i] !== 'number') {
-            throw new Error('Invalid input');
-         }
-         for (let j = i - 1; j >= 0; j -= 1) {
-            if (nums[i] > nums[j]) {
-            arrayClone[i] = nums[j];
-            // eslint-disable-next-line no-continue
-            continue outerLoop;
-            }
-         }
-         arrayClone[i] = -1;
-      }
-
-      return arrayClone;
-
-   }
-   ```
    </p>
 
 </details>
@@ -626,36 +623,36 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
    <summary>Solution 2</summary>
    <p>
 
-   ```js
-   function arrayPreviousLess(nums) {
+```js
+function arrayPreviousLess(nums) {
+  if (!Array.isArray(nums)) {
+    throw new Error("Invalid input");
+  }
 
-      if (!Array.isArray(nums)) {
-         throw new Error('Invalid input');
+  const arrayClone = [...nums];
+
+  nums.forEach((element, index) => {
+    if (typeof element !== "number") {
+      throw new Error("Invalid input");
+    }
+    for (let i = index - 1; i >= 0; i -= 1) {
+      if (element > nums[i]) {
+        arrayClone[index] = nums[i];
+        return;
       }
+    }
+    arrayClone[index] = -1;
+  });
 
-      const arrayClone = [...nums];
+  return arrayClone;
+}
+```
 
-      nums.forEach((element, index) => {
-         if (typeof element !== 'number') {
-            throw new Error('Invalid input');
-         }
-         for (let i = index - 1; i >= 0; i -= 1) {
-            if (element > nums[i]) {
-            arrayClone[index] = nums[i];
-            return;
-            }
-         }
-         arrayClone[index] = -1;
-      });
-
-      return arrayClone;
-   }
-   ```
    </p>
 
 </details>
 
-**********
+---
 
 ### Alphabet subsequence
 
@@ -667,36 +664,36 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
    <p>
 
-   ```js
-   function alphabetSubsequence(str) {
-      if (typeof str !== 'string' || !str.length) {
-         throw new Error('Invalid input');
-      }
+```js
+function alphabetSubsequence(str) {
+  if (typeof str !== "string" || !str.length) {
+    throw new Error("Invalid input");
+  }
 
-      const lowerCaseStr = str.toLowerCase();
-      const lastIndex = str.length - 1;
+  const lowerCaseStr = str.toLowerCase();
+  const lastIndex = str.length - 1;
 
-      for (let i = 0; i < lastIndex; i += 1) {
-         const thisCharCode = lowerCaseStr.charCodeAt(i);
-         const nextCharCode = lowerCaseStr.charCodeAt(i + 1);
-         if (nextCharCode <= thisCharCode) {
-            return false;
-         }
-         if (thisCharCode < 97 || thisCharCode > 122) {
-            return false;
-         }
-      }
+  for (let i = 0; i < lastIndex; i += 1) {
+    const thisCharCode = lowerCaseStr.charCodeAt(i);
+    const nextCharCode = lowerCaseStr.charCodeAt(i + 1);
+    if (nextCharCode <= thisCharCode) {
+      return false;
+    }
+    if (thisCharCode < 97 || thisCharCode > 122) {
+      return false;
+    }
+  }
 
-      const lastCharCode = lowerCaseStr[lastIndex];
-      return !(lastCharCode < 97 || lastCharCode > 122);
-   }
+  const lastCharCode = lowerCaseStr[lastIndex];
+  return !(lastCharCode < 97 || lastCharCode > 122);
+}
+```
 
-   ```
    </p>
    
 </details>
 
-**********
+---
 
 ### Domain types
 
@@ -708,36 +705,37 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
    <p>
 
-   ```js
-   /* eslint-disable consistent-return */
-   /* eslint-disable array-callback-return */
+```js
+/* eslint-disable consistent-return */
+/* eslint-disable array-callback-return */
 
-   function domainType(domains) {
-      return domains.map((domain) => {
-         const domainNameComponents = domain.split('.');
-         const topLevelDomain = domainNameComponents[domainNameComponents.length - 1];
-         switch (topLevelDomain) {
-            case 'com':
-            return 'commercial';
-            case 'org':
-            return 'organization';
-            case 'net':
-            return 'network';
-            case 'info':
-            return 'information';
-            default:
-         }
-      });
-   }
-   ```
+function domainType(domains) {
+  return domains.map((domain) => {
+    const domainNameComponents = domain.split(".");
+    const topLevelDomain =
+      domainNameComponents[domainNameComponents.length - 1];
+    switch (topLevelDomain) {
+      case "com":
+        return "commercial";
+      case "org":
+        return "organization";
+      case "net":
+        return "network";
+      case "info":
+        return "information";
+      default:
+    }
+  });
+}
+```
+
    </p>
 
 </details>
 
-**********
+---
 
 ### Sum of 2
-
 
 ![sum of 2 challenge](questions/21-sum-of-2.png?raw=true "Sum Of 2 Challenge")
 
@@ -763,7 +761,7 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
 </details>
 
-**********
+---
 
 ### Extract matrix column
 
@@ -782,10 +780,9 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
    ```
    </p>
 
-
 </details>
 
-**********
+---
 
 ### Tweet Input Component
 
@@ -807,54 +804,56 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
    const body = document.querySelector('body');
    const tweetBaseUrl = 'https://twitter.com/intent/tweet';
 
-   function emitWarning(){
-      tweetCharactersCountWrapper.classList.add('warning');
-   }
-   function removeWarning(){
-      tweetCharactersCountWrapper.classList.remove('warning');
-   }
-   function removeWarningText(){
-      warningText.classList.remove('display-warning-text');
-   }
-   function disableTweetButton(){
-      tweetButton.classList.add('buttonDisabled');
-   }
-   function enableTweetButton(){
-      tweetButton.classList.remove('buttonDisabled');
-   }
-   function createTweetHandler(event){
-      const tweetCharsLeft = 140 - event.target.value.length
-      tweetCharactersLeftSpan.innerText = tweetCharsLeft;
-      form.setAttribute('action', `${tweetBaseUrl}?text=${event.target.value}`);
-      removeWarningText();
-      if(tweetCharsLeft < 21){
-         emitWarning();
-      }else{
-         removeWarning();
-      }
-      
+function emitWarning(){
+tweetCharactersCountWrapper.classList.add('warning');
+}
+function removeWarning(){
+tweetCharactersCountWrapper.classList.remove('warning');
+}
+function removeWarningText(){
+warningText.classList.remove('display-warning-text');
+}
+function disableTweetButton(){
+tweetButton.classList.add('buttonDisabled');
+}
+function enableTweetButton(){
+tweetButton.classList.remove('buttonDisabled');
+}
+function createTweetHandler(event){
+const tweetCharsLeft = 140 - event.target.value.length
+tweetCharactersLeftSpan.innerText = tweetCharsLeft;
+form.setAttribute('action', `${tweetBaseUrl}?text=${event.target.value}`);
+removeWarningText();
+if(tweetCharsLeft < 21){
+emitWarning();
+}else{
+removeWarning();
+}
+
       if(tweetCharsLeft < 0){
          disableTweetButton();
       }else{
-         enableTweetButton(); 
-      }   
-   }
+         enableTweetButton();
+      }
 
-   function shareTweetHandler(event){
-      event.preventDefault(); //Scrimba throws if ommitted
-      const charLeft = parseInt(tweetCharactersLeftSpan.innerText);
-      if(charLeft < 0){
-         warningText.classList.add('display-warning-text');;
-         return;
-      } 
-      console.log('Yay! Message successfully tweeted');
-   }
+}
 
-   textArea.addEventListener('input', createTweetHandler);
-   tweetButton.addEventListener('click', shareTweetHandler);
-  ```
+function shareTweetHandler(event){
+event.preventDefault(); //Scrimba throws if ommitted
+const charLeft = parseInt(tweetCharactersLeftSpan.innerText);
+if(charLeft < 0){
+warningText.classList.add('display-warning-text');;
+return;
+}
+console.log('Yay! Message successfully tweeted');
+}
 
-  </p>
+textArea.addEventListener('input', createTweetHandler);
+tweetButton.addEventListener('click', shareTweetHandler);
+
+````
+
+</p>
 
 </details>
 
@@ -866,68 +865,66 @@ This is a set of programming challenges from [scrimba.com](https://scrimba.com) 
 
 <details>
 
-  <summary>Solution</summary>
+<summary>Solution</summary>
 
-  <p>
+<p>
 
-  ```js
-   /* eslint-disable */
-   let pushed = false; 
-   let targetInt; 
-   const spinningElem = document.getElementById('spinning'); 
+```js
+ /* eslint-disable */
+ let pushed = false;
+ let targetInt;
+ const spinningElem = document.getElementById('spinning');
 
-   document.getElementById('buttonPressed').addEventListener('click', buttonPressed);
+ document.getElementById('buttonPressed').addEventListener('click', buttonPressed);
 
-   function buttonPressed() {
-   pushed = true;
-   }
+ function buttonPressed() {
+ pushed = true;
+ }
 
-   function setTargetInt() {
-   const targetElem = document.getElementById('targetNum');
-   targetInt = Math.floor(Math.random() * 101);
-   targetElem.innerHTML = targetInt;
-   }
+ function setTargetInt() {
+ const targetElem = document.getElementById('targetNum');
+ targetInt = Math.floor(Math.random() * 101);
+ targetElem.innerHTML = targetInt;
+ }
 
-   const sleep = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
+ const sleep = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
 
-   const spin = async () => {
-   
-   let counter = 0;
-   while (counter < 101) {
-      if (pushed === true) {
-         stop(counter);
-         break;
-      } else {
-         spinningElem.innerText = counter;
-         await sleep(75);
-      }
-      if (counter === 100) {
-         counter = 0;
-      }
-      counter += 1;
-   }
-   
-   };
+ const spin = async () => {
 
-   function stop(i) {
-  
-   const stoppedAt = parseInt(spinningElem.innerText);
-   const delta = Math.abs(targetInt - stoppedAt);
-   const result = document.getElementById('result'); 
-   if (delta === 0) {
-      result.innerText = 'Hooray you won!';
-   } else {
-      result.innerText = `You are off by ${delta}, please try again`;
-   }
-   }
-   setTargetInt();
-   spin();
+ let counter = 0;
+ while (counter < 101) {
+    if (pushed === true) {
+       stop(counter);
+       break;
+    } else {
+       spinningElem.innerText = counter;
+       await sleep(75);
+    }
+    if (counter === 100) {
+       counter = 0;
+    }
+    counter += 1;
+ }
+
+ };
+
+ function stop(i) {
+
+ const stoppedAt = parseInt(spinningElem.innerText);
+ const delta = Math.abs(targetInt - stoppedAt);
+ const result = document.getElementById('result');
+ if (delta === 0) {
+    result.innerText = 'Hooray you won!';
+ } else {
+    result.innerText = `You are off by ${delta}, please try again`;
+ }
+ }
+ setTargetInt();
+ spin();
 
 
-  ```
-
+````
 
   </p>
-
 
 </details>
