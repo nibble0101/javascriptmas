@@ -1,6 +1,7 @@
 # Javascriptmas
 
 [![codecov](https://codecov.io/gh/nibble0101/javascriptmas/branch/master/graph/badge.svg?token=EBZ5VCCZDU)](https://codecov.io/gh/nibble0101/javascriptmas)
+[![Javascriptmas CI](https://github.com/nibble0101/javascriptmas/actions/workflows/run-tests.yaml/badge.svg)](https://github.com/nibble0101/javascriptmas/actions/workflows/run-tests.yaml)
 
 This is a set of programming challenges from [scrimba.com](https://scrimba.com) dubbed [24 days of JavaScriptmas](https://scrimba.com/learn/adventcalendar). It runs from December 01, 2020 - December 24, 2020. Each day a JavaScript challenge is posted and participants are free to attempt and share their solution on twitter. If you want to contribute to this set of solutions, read the [contribution](/CONTRIBUTING.md) instructions.
 
